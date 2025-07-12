@@ -49,6 +49,9 @@ def operations():
 	if(key_word=="--intense-all"):
 		ip_adress=input("Please Input Target ip Address: ")
 		os.system("nmap -p 1-65535 -T4 -A -v "+ip_adress)
+	if(key_word=="--intense-no-ping"):
+		ip_adress=input("Please Input Target ip Address: ")
+		os.system("nmap -T4 -A -v -Pn "+ip_adress)
 	if(key_word=="--ping-scan"):
 		ip_adress=input("Please Input Target ip Address: ")
 		os.system("nmap -sn "+ip_adress)
